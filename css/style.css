@@ -1,0 +1,16 @@
+/* .weather-card {
+   width: 100%;
+   min-width: min-content;
+   border: 0.1rem solid;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+} */
+
+.menu-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+}
+

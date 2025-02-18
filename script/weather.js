@@ -32,5 +32,4 @@ async function CheckWeatherNaples()
         weatherIcon.src = "img/weatherAPI/drizzle.png";
     }
 }
-
 CheckWeatherNaples();

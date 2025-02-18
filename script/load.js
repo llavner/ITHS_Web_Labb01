@@ -19,4 +19,5 @@ function LoadContent(page) {
         console.error('Error loading content:', error);
         contentDiv.innerHTML = '<p>Sorry, there was an error loading the content.</p>';
     });
+    
 }
