@@ -1,0 +1,91 @@
+#left-column {
+    background: linear-gradient(to right, red, white);
+    justify-content: center;
+    align-items: center;
+}
+
+#right-column {
+    background: linear-gradient(to left, green, white);
+    align-items: center;
+    justify-content: center;
+}
+
+#chef-img {
+    padding-top: 1rem;
+}
+
+#center-column {
+    min-height: 100vh;
+}
+
+.navbar {
+    margin-top: 1rem;
+    border: 0.1rem solid;
+    border-radius: 2rem;
+}
+
+.weather-card {
+   width: 50%;
+   min-width: min-content;
+   border-radius: 2rem;
+   border: 0.1rem solid;
+   align-items: center;
+   text-align: center;
+   padding: 2rem;
+   background: rgba(132, 187, 155, 0.356);
+}
+
+.cart {
+    align-items: center;
+    text-align: center;
+}
+h1, h2, h5 {
+    font-family: cursive;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#address {
+    font-weight: bold;
+    font-size: large;
+}
+
+.content {
+    margin-top: 4rem;
+}
+
+.menu-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+    
+}
+
+.scroll-bar {
+    padding-right: 1rem;
+    overflow-y: scroll; 
+    height: 40rem; 
+    width: auto; 
+}
+
+#mymap {
+    background: url(/img/googlemaps.webp);
+    border: 0.1rem solid;
+    border-radius: 2rem;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding-top: 76.25%;
+}
+
+#mymap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
