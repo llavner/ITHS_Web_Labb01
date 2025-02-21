@@ -45,8 +45,8 @@ function LoadMenu(){
     pizzaItems.forEach(item => {
         let menuDiv = document.createElement('div');
             menuDiv.innerHTML = `
-                <div class="card" style="width: 14rem;">
-                    <img src="${item.imgSrc}" class="card-img-top" alt="Product Image">
+                <div class="card" style="width: 12rem;">
+                    <img src="${item.imgSrc}" class="card-img-top" width="70px" height="120px" alt="Product Image">
                     <div class="card-body">
                     <h5 class="card-title">${item.title}</h5>
                     <p class="card-text">${item.discription}</p>
@@ -63,8 +63,8 @@ function LoadMenu(){
     pastaItems.forEach(item => {
         let menuDiv = document.createElement('div');
             menuDiv.innerHTML = `
-                <div class="card" style="width: 14rem;">
-                    <img src="${item.imgSrc}" class="card-img-top" alt="Product Image">
+                <div class="card" style="width: 12rem;">
+                    <img src="${item.imgSrc}" class="card-img-top" width="70px" height="120px" alt="Product Image">
                     <div class="card-body">
                     <h5 class="card-title">${item.title}</h5>
                     <p class="card-text">${item.discription}</p>
