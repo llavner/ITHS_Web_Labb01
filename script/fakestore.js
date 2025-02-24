@@ -66,10 +66,13 @@ function updateCart()
             cartRow.classList.add('cart-row');
 
             cartRow.innerHTML = `
+            <div class="cart-img">
+                <img src="${i.selectedItem.imgSrc}" width="50px">
+            </div>
             <div class="cart-item cart-column">
                 <span class="cart-item-title">${i.selectedItem.title}</span>
             </div>
-            <span class="cart-price cart-column">${i.selectedItem.price}</span>
+            <span class="cart-price cart-column">${i.selectedItem.price} €</span>
                 <div class="cart-quantity cart-column">
                     <input class="cart-quantity-input" type="number" value="${i.quantity}">
                     <button class="btn btn-danger" type="button" onclick="removeCartItem(${i.selectedItem.id})">REMOVE</button>
@@ -94,24 +97,39 @@ function quantityChanged(event)
 
 function removeCartItem(id)
 {
-   cartStorage = cartStorage.filter(x => x.selectedItem.id !== id);
+    let itemToRemove = cartStorage.find(x => id === x.selectedItem.id);
+    
+    if(itemToRemove.quantity < 2 )
+    {
+        cartStorage = cartStorage.filter(x => x.selectedItem.id !== id);
+    }
+    else
+    {
+        itemToRemove.quantity--;
+    }
 
+    
     updateCart();
     saveCart();
 }
 
 function updateCartTotal()
 {
-    var total = 0
+    var total = 0;
+    let quantityCombined = 0;
 
     cartStorage.forEach(x => 
     {
-        total += x.selectedItem.price * x.quantity
+        total += x.selectedItem.price * x.quantity;
+
+        quantityCombined += x.quantity;
     });
 
-    total = Math.round(total * 100) / 100
+    total = Math.round(total * 100) / 100;
 
-    document.getElementsByClassName('cart-total-price')[0].innerText = total + "€"
+    document.getElementsByClassName('cart-total-price')[0].innerText = total + "€";
+    document.getElementsByClassName('quantity-cart')[0].innerText = quantityCombined.toString();
+    console.log(quantityCombined);
 }
 
 loadCart();
