@@ -66,17 +66,21 @@ function updateCart()
             cartRow.classList.add('cart-row');
 
             cartRow.innerHTML = `
-            <div class="cart-img">
-                <img src="${i.selectedItem.imgSrc}" width="50px">
-            </div>
-            <div class="cart-item cart-column">
-                <span class="cart-item-title">${i.selectedItem.title}</span>
-            </div>
-            <span class="cart-price cart-column">${i.selectedItem.price} €</span>
-                <div class="cart-quantity cart-column">
-                    <input class="cart-quantity-input" type="number" value="${i.quantity}">
-                    <button class="btn btn-danger" type="button" onclick="removeCartItem(${i.selectedItem.id})">REMOVE</button>
-                </div>`;
+            <div style="border: 0.1rem solid; margin-bottom: 0.5rem; padding: 1rem;">
+                <div class="row">
+                    <div class="cart-img">
+                        <img src="${i.selectedItem.imgSrc}" width="50px">
+                    </div>
+                    <div class="cart-item cart-column">
+                        <span class="cart-item-title">${i.selectedItem.title}</span>
+                    </div>
+                </div>
+                <span class="cart-price cart-column">${i.selectedItem.price} €</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="${i.quantity}">
+                        <button class="btn btn-danger" type="button" onclick="removeCartItem(${i.selectedItem.id})">REMOVE</button>
+                    </div>
+            </div>`;
             
                 cartItems.appendChild(cartRow);
         });
