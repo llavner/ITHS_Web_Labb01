@@ -17,6 +17,22 @@
 
 #center-column {
     min-height: 100vh;
+    
+}
+
+.content {
+    margin-top: 4rem;
+    
+}
+.about-content {
+    flex-direction: column;
+    justify-content: center;
+    width: 20rem;
+}
+.contact-content {
+    flex-direction: column;
+    justify-content: center;
+    width: 20rem;
 }
 
 .navbar {
@@ -71,10 +87,9 @@ p {
     font-size: large;
 }
 
-.content {
-    margin-top: 4rem;
+
+#header-text-menu {
     text-align: center;
-    
 }
 
 #menu-header {
@@ -103,7 +118,7 @@ p {
 }
 
 #mymap {
-    background: url(/img/googlemaps.webp);
+    background: url(./img/googlemaps.webp);
     border: 0.1rem solid;
     border-radius: 2rem;
     background-size: cover;
