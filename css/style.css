@@ -17,6 +17,22 @@
 
 #center-column {
     min-height: 100vh;
+    
+}
+
+.content {
+    margin-top: 4rem;
+    
+}
+.about-content {
+    flex-direction: column;
+    justify-content: center;
+    width: 20rem;
+}
+.contact-content {
+    flex-direction: column;
+    justify-content: center;
+    width: 20rem;
 }
 
 .navbar {
@@ -35,6 +51,8 @@
 
 .cart-item {
     margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: row;
 }
 .quantity-cart{
     margin-top: 1rem;;
@@ -69,17 +87,28 @@ p {
     font-size: large;
 }
 
-.content {
-    margin-top: 4rem;
+
+#header-text-menu {
+    text-align: center;
 }
 
+#menu-header {
+    margin-bottom: 2rem;
+
+}
 .menu-content {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: start;
-    
+    justify-content: center;
+    text-align: start;
 }
+
+.product-price {
+    font-weight: bold;
+    font-size: large;
+    color: green;
+} 
 
 .scroll-bar {
     padding-right: 1rem;
@@ -89,7 +118,7 @@ p {
 }
 
 #mymap {
-    background: url(/img/googlemaps.webp);
+    background: url(./img/googlemaps.webp);
     border: 0.1rem solid;
     border-radius: 2rem;
     background-size: cover;
