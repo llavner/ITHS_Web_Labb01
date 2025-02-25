@@ -52,7 +52,7 @@ function loadMenu(){
                 <div class="card" style="width: 12rem;">
                     <img src="${item.imgSrc}" class="card-img-top" alt="Product Image">
                     <div class="card-body">
-                    <h5 class="card-title">${item.title}</h5>
+                    <h2 class="card-title">${item.title}</h2>
                     <p class="card-text">${item.discription}</p>
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <span class="product-price">${item.price} €</span>
