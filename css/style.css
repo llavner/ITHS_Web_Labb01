@@ -26,19 +26,22 @@
 }
 .about-content {
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     width: 20rem;
+    margin: 2rem;;
 }
 .contact-content {
     flex-direction: column;
     justify-content: center;
     width: 20rem;
+    margin: 2rem;
 }
 
 .navbar {
-    margin-top: 1rem;
+    margin-top: 2rem;
     border: 0.1rem solid;
     border-radius: 2rem;
+    background: linear-gradient(to right, goldenrod, white);
 }
 
 #btn-cart {
@@ -47,12 +50,6 @@
     border: 0.5rem solid;
     border-color: brown;
     margin-bottom: 6rem;
-}
-
-.cart-item {
-    margin-bottom: 0.5rem;
-    display: flex;
-    flex-direction: row;
 }
 .quantity-cart{
     margin-top: 1rem;;
@@ -76,6 +73,9 @@
 
 h1, h2, h5 {
     font-family: cursive;
+}
+.temp {
+    color: black;
 }
 
 p {
@@ -118,7 +118,7 @@ p {
 }
 
 #mymap {
-    background: url(./img/googlemaps.webp);
+    background: url(https://llavner.github.io/ITHS_Web_Labb01/img/googlemaps.webp);
     border: 0.1rem solid;
     border-radius: 2rem;
     background-size: cover;
