@@ -103,7 +103,14 @@ p {
     justify-content: center;
     text-align: start;
 }
-
+#addbutton {
+    width: 7rem;
+}
+#infobutton {
+    margin-top: 1rem;
+    background-color: blueviolet;
+    padding: 0.2rem;
+}
 .product-price {
     font-weight: bold;
     font-size: large;
