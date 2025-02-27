@@ -71,8 +71,8 @@
    background: rgba(132, 187, 155, 0.356);
 }
 
-h1, h2, h5 {
-    font-family: cursive;
+h1, h2, h3, h5 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif
 }
 .temp {
     color: black;
