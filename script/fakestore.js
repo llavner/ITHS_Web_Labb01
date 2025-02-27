@@ -15,13 +15,6 @@ async function loadCart()
         updateCart();
     }
 
-    // var quantityInputs = document.getElementsByClassName('cart-quantity-input');
-
-    // for(var i = 0; i < quantityInputs.length; i++)
-    // {
-    //     var input = quantityInputs[i];
-    //     input.addEventListener('change', quantityChanged);
-    // }
 }
 
 function addItem(id)
@@ -46,7 +39,14 @@ function addItem(id)
 
 function purchaseClicked()
 {
-    alert('Thank you for your purchase!');
+    if(cartStorage.length < 1)
+    {
+        alert('Please add some items into the cart.')
+    }
+    else
+    {
+        alert('Thank you for your purchase!');
+    }
 
     cartStorage = [];
     
@@ -75,9 +75,10 @@ function updateCart()
                         <span class="cart-item-title">${i.selectedItem.title}</span>
                     </div>
                 </div>
-                <span class="cart-price cart-column">${i.selectedItem.price} €</span>
+                <span class="product-price cart-column">${i.selectedItem.price} €</span>
                     <div class="cart-quantity cart-column">
-                        <input class="cart-quantity-input" type="number" value="${i.quantity}">
+                        <p class="cart-quantity-input">Amount: ${i.quantity}</p>
+                        <button class="btn btn-primary" type="button" onclick="addItem(${i.selectedItem.id})">ADD</button>
                         <button class="btn btn-danger" type="button" onclick="removeCartItem(${i.selectedItem.id})">REMOVE</button>
                     </div>
             </div>`;
@@ -85,18 +86,7 @@ function updateCart()
                 cartItems.appendChild(cartRow);
         });
 
-        
         updateCartTotal();
-}
-
-function quantityChanged(event)
-{
-    var input = event.target
-    if (input.value <= 0)
-    {
-        input.value = 1
-    }
-    updateCartTotal()
 }
 
 function removeCartItem(id)
@@ -133,7 +123,7 @@ function updateCartTotal()
 
     document.getElementsByClassName('cart-total-price')[0].innerText = total + "€";
     document.getElementsByClassName('quantity-cart')[0].innerText = quantityCombined.toString();
-    console.log(quantityCombined);
+    
 }
 
 loadCart();
