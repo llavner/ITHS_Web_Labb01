@@ -14,7 +14,6 @@ Fiktiv hemsida för en italiensk restaurang.
 
 ## Screenshots:
 ![trattoria_screen2](https://github.com/user-attachments/assets/383e1a55-836a-4cb4-87b6-bcc78203cfa3)
-![trattoria_screen1](https://github.com/user-attachments/assets/07baeffd-683d-47e3-abf7-f4e537c713e8)
 
 
 ## Kontakt:
